@@ -24,7 +24,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="(row, nu) in datas" @click="update(nu)">
+				<tr v-for="(row, nu) in datas" @click="updateModal(nu)">
 					<td>{{row.id}}</td>
 					<td>{{row.title}}</td>
 					<td>{{row.isbn}}</td>
@@ -59,7 +59,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" id="add" class="btn btn-custom" @click="add()">Add</button>
+						<button type="button" id="add" class="btn btn-custom" @click="addDass()">Add</button>
 						<button type="button" id="edit" class="btn btn-custom" @click="updateData()">Update</button>
 					</div>
 				</div>

@@ -30,7 +30,7 @@ const app = new Vue({
 
 			$('#myModal').modal('show');
 		},
-		update: function (id) {
+		updateModal: function (id) {
 			let modal = document.querySelector('#myModal')
 			let add = document.querySelector('#add')
 			let edit = document.querySelector('#edit')
@@ -47,7 +47,7 @@ const app = new Vue({
 			$('#myModal').modal('show');
 
 		},
-		add: function () {
+		addDass: function () {
 			this.datas.push({
 				id: this.id++,
 				dev: this.dev,
