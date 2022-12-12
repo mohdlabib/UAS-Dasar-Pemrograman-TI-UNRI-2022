@@ -15,15 +15,15 @@ const app = new Vue({
 	data: {
 		datas: datas,
 		id: 6,
-		isbn: '',
-		author: '',
-		title: '',
+		no: '',
+		dev: '',
+		tile: '',
 	},
 	methods: {
 		modal: function () {
-			this.isbn = '';
-			this.author = '';
-			this.title = '';
+			this.no = '';
+			this.dev = '';
+			this.tile = '';
 
 			let edit = document.querySelector('#edit')
 			edit.classList.add('d-none')
@@ -40,9 +40,9 @@ const app = new Vue({
 
 			modal.getElementsByTagName("input")[0].value = id + 1
 
-			this.isbn = this.datas[id].isbn;
-			this.author = this.datas[id].author;
-			this.title = this.datas[id].title;
+			this.no = this.datas[id].no;
+			this.dev = this.datas[id].dev;
+			this.tile = this.datas[id].tile;
 
 			$('#myModal').modal('show');
 
@@ -50,16 +50,16 @@ const app = new Vue({
 		add: function () {
 			this.datas.push({
 				id: this.id++,
-				author: this.author,
-				isbn: this.isbn,
-				title: this.title
+				dev: this.dev,
+				no: this.no,
+				tile: this.tile
 			});
 
 			$('#myModal').modal('hide')
 
 			Toast.fire({
 				icon: 'success',
-				title: 'Successfully Add Data'
+				tile: 'Successfully Add Data'
 			})
 		},
 		updateData: function () {
@@ -69,9 +69,9 @@ const app = new Vue({
 			for (let i = 0; i < this.datas.length; i++) {
 				if (this.datas[i].id == id) {
 					this.datas.splice(i, 1, {
-						title: this.title,
-						author: this.author,
-						isbn: this.isbn,
+						tile: this.tile,
+						dev: this.dev,
+						no: this.no,
 						id: id
 					});
 				}
@@ -81,7 +81,7 @@ const app = new Vue({
 
 			Toast.fire({
 				icon: 'success',
-				title: 'Successfully Update Data'
+				tile: 'Successfully Update Data'
 			})
 		},
 	}

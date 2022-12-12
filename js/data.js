@@ -1,33 +1,33 @@
 let datas = [
 	{
 		id: 1,
-		title: 'Based Design Mobile Learning Course on Android',
-		author: 'Liranti Rahmelina',
-		isbn: "1978-0524-2528-6374"
+		tile: 'Based Design Mobile Learning Course on Android',
+		dev: 'Liranti Rahmelina',
+		no: "1978-0524-2528-6374"
 	},
 	{
 		id: 2,
-		title: 'Development of Sales Application Using QR Code',
-		author: 'Ricky Akbar, Husnil Kamil',
-		isbn: "1978-0524-2528-6374"
+		tile: 'Development of Sales Application Using QR Code',
+		dev: 'Ricky Akbar, Husnil Kamil',
+		no: "1978-0524-2528-6374"
 	},
 	{
 		id: 3,
-		title: 'Perancangan dan Implementasi Web Service pada Aplikasi Permainan ',
-		author: 'Gilang Arsya Priyatna Zaman',
-		isbn: "1978-0524-2528-6374"
+		tile: 'Perancangan dan Implementasi Web Service pada Aplikasi Permainan ',
+		dev: 'Gilang Arsya Priyatna Zaman',
+		no: "1978-0524-2528-6374"
 	},
 	{
 		id: 4,
-		title: 'Perancangan Augmented Reality Media Markerless PoI',
-		author: 'Abraham Christover Manuputty',
-		isbn: "1978-0524-2528-6374"
+		tile: 'Perancangan Augmented Reality Media Markerless PoI',
+		dev: 'Abraham Christover Manuputty',
+		no: "1978-0524-2528-6374"
 	}
 	,
 	{
 		id: 5,
-		title: 'Pengembangan SIG Berbasis Node.JS untuk Pemetaan Mesin dan Tracking',
-		author: 'Rachmat Fajrin',
-		isbn: "1978-0524-2528-6374"
+		tile: 'Pengembangan SIG Berbasis Node.JS untuk Pemetaan Mesin dan Tracking',
+		dev: 'Rachmat Fajrin',
+		no: "1978-0524-2528-6374"
 	}
 ]
