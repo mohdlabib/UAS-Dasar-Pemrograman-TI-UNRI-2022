@@ -22,37 +22,34 @@ const app = new Vue({
 	methods: {
 		modal: function () {
 			this.no = '';
-			this.dev = '';
-			this.tile = '';
-
 			let edit = document.querySelector('#edit')
+			this.dev = '';
 			edit.classList.add('d-none')
-
+			this.tile = '';
 			$('#myModal').modal('show');
 		},
 		updateModal: function (id) {
 			let modal = document.querySelector('#myModal')
 			let add = document.querySelector('#add')
+			this.no = this.datas[id].no;
 			let edit = document.querySelector('#edit')
 
 			edit.classList.remove('d-none')
+			this.tile = this.datas[id].tile;
 			add.classList.add('d-none')
 
-			modal.getElementsByTagName("input")[0].value = id + 1
-
-			this.no = this.datas[id].no;
 			this.dev = this.datas[id].dev;
-			this.tile = this.datas[id].tile;
+			modal.getElementsByTagName("input")[0].value = id + 1
 
 			$('#myModal').modal('show');
 
 		},
 		addDass: function () {
 			this.datas.push({
-				id: this.id++,
-				dev: this.dev,
 				no: this.no,
-				tile: this.tile
+				id: this.id++,
+				tile: this.tile,
+				dev: this.dev
 			});
 
 			$('#myModal').modal('hide')
@@ -64,15 +61,15 @@ const app = new Vue({
 		},
 		updateData: function () {
 			let modal = document.querySelector('#myModal')
-			let id = modal.getElementsByTagName("input")[0].value
+			let ids = modal.getElementsByTagName("input")[0].value
 
 			for (let i = 0; i < this.datas.length; i++) {
-				if (this.datas[i].id == id) {
+				if (this.datas[i].id == ids) {
 					this.datas.splice(i, 1, {
-						tile: this.tile,
 						dev: this.dev,
+						tile: this.tile,
 						no: this.no,
-						id: id
+						id: ids
 					});
 				}
 			}
