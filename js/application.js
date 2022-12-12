@@ -30,21 +30,6 @@ const app = new Vue({
 
 			$('#myModal').modal('show');
 		},
-		add: function () {
-			this.datas.push({
-				id: this.id++,
-				author: this.author,
-				isbn: this.isbn,
-				title: this.title
-			});
-
-			$('#myModal').modal('hide')
-
-			Toast.fire({
-				icon: 'success',
-				title: 'Successfully Add Data'
-			})
-		},
 		update: function (id) {
 			let modal = document.querySelector('#myModal')
 			let add = document.querySelector('#add')
@@ -61,6 +46,21 @@ const app = new Vue({
 
 			$('#myModal').modal('show');
 
+		},
+		add: function () {
+			this.datas.push({
+				id: this.id++,
+				author: this.author,
+				isbn: this.isbn,
+				title: this.title
+			});
+
+			$('#myModal').modal('hide')
+
+			Toast.fire({
+				icon: 'success',
+				title: 'Successfully Add Data'
+			})
 		},
 		updateData: function () {
 			let modal = document.querySelector('#myModal')
