@@ -14,10 +14,7 @@ const app = new Vue({
 	el: '#App',
 	data: {
 		datas: datas,
-		id: 6,
-		no: '',
-		dev: '',
-		tile: '',
+		id: 6,no: '',dev: '',tile: '',
 	},
 	methods: {
 		modal: function () {

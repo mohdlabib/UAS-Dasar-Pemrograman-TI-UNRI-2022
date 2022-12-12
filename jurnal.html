@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
-	<title>Journal</title>
+	<title>List Journal</title>
 </head>
 
 <body>
@@ -26,9 +26,9 @@
 			<tbody>
 				<tr v-for="(row, nu) in datas" @click="updateModal(nu)">
 					<td>{{row.id}}</td>
-					<td>{{row.title}}</td>
-					<td>{{row.isbn}}</td>
-					<td>{{row.author}}</td>
+					<td>{{row.tile}}</td>
+					<td>{{row.no}}</td>
+					<td>{{row.dev}}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -46,15 +46,15 @@
 						<input type="hidden" value="1">
 						<div class="mb-3">
 							<label class="form-label">Title</label>
-							<input type="text" v-model="title" class="form-control" required>
+							<input type="text" v-model="tile" class="form-control" required>
 						</div>
 						<div class="mb-3">
 							<label class="form-label">ISBN</label>
-							<input type="text" v-model="isbn" class="form-control" required>
+							<input type="text" v-model="no" class="form-control" required>
 						</div>
 						<div class="mb-3">
 							<label class="form-label">Author</label>
-							<input type="text" v-model="author" class="form-control" required>
+							<input type="text" v-model="dev" class="form-control" required>
 						</div>
 					</div>
 					<div class="modal-footer">
